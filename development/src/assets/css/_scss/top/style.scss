@@ -1,0 +1,185 @@
+@charset "utf-8";
+
+// common
+@import "../init/import";
+@import "../init/reset"; // リセットCSS、フォントサイズ
+
+html{
+  height:100%;
+}
+
+body {
+  width: 100%;
+  height:100%;
+  margin: 0;
+  background-color: #fff;
+  counter-reset: number 0;
+  font-family: Consolas, 'Courier New', Courier, Monaco, monospace;
+}
+canvas {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#top {
+
+  h1{
+    margin-top: 20px;
+    margin-left: 20px;
+    font-weight: bold;
+  }
+
+  h2{
+    margin: 20px 0 10px 20px;
+  }
+
+  .link_list {
+    margin-left: 20px;
+    li {
+      margin-bottom: 5px;
+    }
+    li:before {
+      counter-increment: number 1;      /* number カウンタの増加数をセット */
+      content: "0" counter(number) ". ";      /* 表示形式を指定 */
+    }
+    li:nth-of-type(9) ~ li:before {
+      content: counter(number) ". ";
+    }
+  }
+}
+
+#textureBg{
+  min-height: 100%;
+  overflow: hidden;
+  margin: 0;
+  background-color: #1f1f1f;
+
+  canvas {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+  }
+
+}
+
+#webgl-output{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.sketchTitle{
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  z-index: 10;
+  font-size: 30px;
+  color: #fff;
+}
+
+.sketchDes{
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  z-index: 10;
+  font-size: 20x;
+  color: #fff;
+}
+
+#ZoomBlur {
+  .sketchTitle {
+    color: #000;
+  }
+  .sketchDes {
+    color: #000;
+  }
+  #webgl-output {
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+#textTransform {
+  .sketchTitle {
+    color: #000;
+  }
+  .sketchDes {
+    color: #000;
+  }
+  #webgl-output {
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+#textEffect {
+  background-color: #000;
+  .sketchTitle {
+    color: #fff;
+  }
+  .sketchDes {
+    color: #fff;
+  }
+  #webgl-output {
+    //background-color: #000;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+#Dissolve {
+  #webgl-output {
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+#MorphingGLSL {
+  .sketchTitle {
+    color: #000;
+  }
+  .sketchDes {
+    color: #000;
+  }
+  #webgl-output {
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+#maskEffect {
+  .sketchTitle {
+    color: #000;
+  }
+  .sketchDes {
+    color: #000;
+  }
+  #webgl-output {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,408 @@
+@charset 'UTF-8';
+/* --------------------------------------------------------------------------------
+*
+*   easing
+*
+-------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------
+*
+*   prefix
+*
+-------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------
+*
+*   font-size対応表
+*
+-------------------------------------------------------------------------------- */
+/*  ================================================================================
+Base font = 12px
+================================================================================ */
+/* ================================================================================
+Base font = 13px
+================================================================================ */
+/* ================================================================================
+Base font = 15px
+================================================================================ */
+/* ================================================================================
+Base font = 16px
+================================================================================ */
+/* --------------------------------------------------------------------------------
+*
+*   mixin
+*
+-------------------------------------------------------------------------------- */
+/*
+  *
+  *   how to
+  *
+  */
+/* --------------------------------------------------------------------------------
+*
+*   transform
+*
+-------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------
+*
+*   transition
+*
+-------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------
+*
+*   animation
+*
+-------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------
+*
+*   media query
+*
+-------------------------------------------------------------------------------- */
+/*
+    *
+    *   how to   
+    *
+    */
+/* --------------------------------------------------------------------------------
+*
+*   portrait,landscape
+*
+-------------------------------------------------------------------------------- */
+/*
+  *
+  *   how to
+  *
+  */
+/* --------------------------------------------------------------------------------
+*
+*   function
+*
+-------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------
+*
+*   common
+*
+-------------------------------------------------------------------------------- */
+/*
+*
+*   how to
+*
+*/
+/*
+*
+*   font
+*
+*/
+/*
+ *
+ *   web font   
+ *
+ */
+body
+{
+    margin: 0;
+    padding: 0;
+
+    border: none;
+}
+
+/* image */
+img,
+div,
+p,
+blockquote,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+form,
+fieldset,
+textarea
+{
+    font-size: 100%;
+    font-weight: normal;
+    font-style: normal;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    text-decoration: none;
+
+    border: 0;
+}
+
+a
+{
+    cursor: pointer;
+}
+
+table
+{
+    font-size: 100%;
+}
+
+hr.separator
+{
+    display: none;
+}
+
+input,
+button,
+select,
+textarea
+{
+    resize: none;
+
+    border: none;
+    border-radius: 0;
+    outline: none;
+    background-color: transparent;
+
+    -webkit-appearance: none;
+}
+
+img
+{
+    vertical-align: bottom;
+}
+
+html
+{
+    height: 100%;
+}
+
+body
+{
+    font-family:  Consolas, 'Courier New', Courier, Monaco, monospace;
+
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+    counter-reset: number 0;
+
+    background-color: #fff;
+}
+
+canvas
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+#top h1
+{
+    font-weight: bold;
+
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#top h2
+{
+    margin: 20px 0 10px 20px;
+}
+
+#top .link_list
+{
+    margin-left: 20px;
+}
+
+#top .link_list li
+{
+    margin-bottom: 5px;
+}
+
+#top .link_list li:before
+{
+    /* number カウンタの増加数をセット */
+    content: '0' counter(number) '. ';
+    counter-increment: number 1;
+    /* 表示形式を指定 */
+}
+
+#top .link_list li:nth-of-type(9) ~ li:before
+{
+    content: counter(number) '. ';
+}
+
+#textureBg
+{
+    overflow: hidden;
+
+    min-height: 100%;
+    margin: 0;
+
+    background-color: #1f1f1f;
+}
+
+#textureBg canvas
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#webgl-output
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.sketchTitle
+{
+    font-size: 30px;
+
+    position: absolute;
+    z-index: 10;
+    top: 50px;
+    left: 50px;
+
+    color: #fff;
+}
+
+.sketchDes
+{
+    font-size: 20x;
+
+    position: absolute;
+    z-index: 10;
+    top: 100px;
+    left: 50px;
+
+    color: #fff;
+}
+
+#ZoomBlur .sketchTitle
+{
+    color: #000;
+}
+
+#ZoomBlur .sketchDes
+{
+    color: #000;
+}
+
+#ZoomBlur #webgl-output
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    margin: 0 auto;
+
+    transform: translate(-50%, -50%);
+}
+
+#textTransform .sketchTitle
+{
+    color: #000;
+}
+
+#textTransform .sketchDes
+{
+    color: #000;
+}
+
+#textTransform #webgl-output
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    margin: 0 auto;
+
+    transform: translate(-50%, -50%);
+}
+
+#textEffect
+{
+    background-color: #000;
+}
+
+#textEffect .sketchTitle
+{
+    color: #fff;
+}
+
+#textEffect .sketchDes
+{
+    color: #fff;
+}
+
+#textEffect #webgl-output
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    margin: 0 auto;
+
+    transform: translate(-50%, -50%);
+}
+
+#Dissolve #webgl-output
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    margin: 0 auto;
+
+    transform: translate(-50%, -50%);
+}
+
+#MorphingGLSL .sketchTitle
+{
+    color: #000;
+}
+
+#MorphingGLSL .sketchDes
+{
+    color: #000;
+}
+
+#MorphingGLSL #webgl-output
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    margin: 0 auto;
+
+    transform: translate(-50%, -50%);
+}
+
+#maskEffect .sketchTitle
+{
+    color: #000;
+}
+
+#maskEffect .sketchDes
+{
+    color: #000;
+}
+
+#maskEffect #webgl-output
+{
+    position: fixed;
+
+    width: 100%;
+    height: 100%;
+}
