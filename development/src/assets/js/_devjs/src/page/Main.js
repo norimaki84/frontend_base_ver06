@@ -45,7 +45,6 @@ export default class Main {
 
   onLoad() {
 
-
   }
 
   onRender() {
