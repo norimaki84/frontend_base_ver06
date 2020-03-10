@@ -11,13 +11,16 @@ gulp + webpackによる静的ファイル生成のための開発環境テンプ
 ## Description
 (1) HTML 
 - テンプレートエンジンは[EJS](https://github.com/mde/ejs)を使用
-- ページごとのmeta情報は[development/src/assets/ejs/inc/metaData.json](https://github.com/Teraguchi0804/frontend_base_ver06/blob/master/development/src/assets/ejs/inc/metaData.json)で一括管理
+- ページごとのmeta情報は[metaData.json](https://github.com/Teraguchi0804/frontend_base_ver06/blob/master/development/src/assets/ejs/inc/metaData.json)で一括管理
 
 (2) CSS 
 - ベースはSCSS記法
 
 (3) JavaScript
 - モジュールバンドルはwebpackで行う 
+
+(4) Path
+- 開発時のPathの設定は[config.js](https://github.com/Teraguchi0804/frontend_base_ver06/blob/master/development/config.js)で設定
 
 ## Build Setup
 
