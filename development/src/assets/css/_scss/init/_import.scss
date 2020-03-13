@@ -2,9 +2,6 @@
 // 各Sassファイルのインポート
 // ===================================================================
 
-// 設定用
-@import "setting";
-
-// ミックスイン、@extend、CSS3など
+// mixin、normalizeなど
 @import "mixin";
-@import "extend";
+@import "normalize";
