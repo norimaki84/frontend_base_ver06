@@ -1,3 +1,12 @@
+/**
+  CSSのレンダリング設定
+ */
+html, body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 
 /**

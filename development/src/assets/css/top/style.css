@@ -1,54 +1,56 @@
 @charset 'UTF-8';
-/* --------------------------------------------------------------------------------
-*
-*   mixin
-*
--------------------------------------------------------------------------------- */
-/*
-  *
-  *   how to
-  *
-  */
-/* --------------------------------------------------------------------------------
-*
-*   transform
-*
--------------------------------------------------------------------------------- */
-/* --------------------------------------------------------------------------------
-*
-*   transition
-*
--------------------------------------------------------------------------------- */
-/* --------------------------------------------------------------------------------
-*
-*   animation
-*
--------------------------------------------------------------------------------- */
-/* --------------------------------------------------------------------------------
-*
-*   media query
-*
--------------------------------------------------------------------------------- */
-/*
-    *
-    *   how to   
-    *
-    */
-/* --------------------------------------------------------------------------------
-*
-*   portrait,landscape
-*
--------------------------------------------------------------------------------- */
-/*
-  *
-  *   how to
-  *
-  */
-/* --------------------------------------------------------------------------------
-*
-*   function
-*
--------------------------------------------------------------------------------- */
+/* Noto Sans Japanese */
+@font-face
+{
+    font-family: 'NotoSansCJKjp-Regular';
+    font-weight: 400;
+    font-style: normal;
+
+    src: local('Noto Sans CJK JP Regular'), url('/fonts/NotoSansCJKjp-Regular.woff2') format('woff2'), url('/fonts/NotoSansCJKjp-Regular.woff') format('woff'), url('/fonts/NotoSansCJKjp-Regular.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face
+{
+    font-family: 'NotoSansCJKjp-Medium';
+    font-weight: 500;
+    font-style: normal;
+
+    src: local('Noto Sans CJK JP Medium'), url('/fonts/NotoSansCJKjp-Mediumr.woff2') format('woff2'), url('/fonts/NotoSansCJKjp-Mediumr.woff') format('woff'), url('/fonts/NotoSansCJKjp-Medium.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face
+{
+    font-family: 'NotoSansCJKjp-Bold';
+    font-weight: 700;
+    font-style: normal;
+
+    src: local('Noto Sans CJK JP Bold'), url('/fonts/NotoSansCJKjp-Bold.woff2') format('woff2'), url('/fonts/NotoSansCJKjp-Bold.woff') format('woff'), url('/fonts/NotoSansCJKjp-Bold.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face
+{
+    font-family: 'NotoSansCJKjp-Black';
+    font-weight: 900;
+    font-style: normal;
+
+    src: local('Noto Sans CJK JP Black'), url('/fonts/NotoSansCJKjp-Black.woff2') format('woff2'), url('/fonts/NotoSansCJKjp-Black.woff') format('woff'), url('/fonts/NotoSansCJKjp-Black.ttf') format('truetype');
+    font-display: swap;
+}
+
+/**
+  CSSのレンダリング設定
+ */
+html,
+body
+{
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -636,7 +638,8 @@ canvas
 
 #top h1
 {
-    font-weight: bold;
+    font-family: 'NotoSansCJKjp-Bold', sans-serif;
+    font-size: 26px;
 
     margin-top: 20px;
     margin-left: 20px;
@@ -668,173 +671,4 @@ canvas
 #top .link_list li:nth-of-type(9) ~ li:before
 {
     content: counter(number) '. ';
-}
-
-#textureBg
-{
-    overflow: hidden;
-
-    min-height: 100%;
-    margin: 0;
-
-    background-color: #1f1f1f;
-}
-
-#textureBg canvas
-{
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-
-#webgl-output
-{
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-}
-
-.sketchTitle
-{
-    font-size: 30px;
-
-    position: absolute;
-    z-index: 10;
-    top: 50px;
-    left: 50px;
-
-    color: #fff;
-}
-
-.sketchDes
-{
-    font-size: 20x;
-
-    position: absolute;
-    z-index: 10;
-    top: 100px;
-    left: 50px;
-
-    color: #fff;
-}
-
-#ZoomBlur .sketchTitle
-{
-    color: #000;
-}
-
-#ZoomBlur .sketchDes
-{
-    color: #000;
-}
-
-#ZoomBlur #webgl-output
-{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    margin: 0 auto;
-
-    transform: translate(-50%, -50%);
-}
-
-#textTransform .sketchTitle
-{
-    color: #000;
-}
-
-#textTransform .sketchDes
-{
-    color: #000;
-}
-
-#textTransform #webgl-output
-{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    margin: 0 auto;
-
-    transform: translate(-50%, -50%);
-}
-
-#textEffect
-{
-    background-color: #000;
-}
-
-#textEffect .sketchTitle
-{
-    color: #fff;
-}
-
-#textEffect .sketchDes
-{
-    color: #fff;
-}
-
-#textEffect #webgl-output
-{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    margin: 0 auto;
-
-    transform: translate(-50%, -50%);
-}
-
-#Dissolve #webgl-output
-{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    margin: 0 auto;
-
-    transform: translate(-50%, -50%);
-}
-
-#MorphingGLSL .sketchTitle
-{
-    color: #000;
-}
-
-#MorphingGLSL .sketchDes
-{
-    color: #000;
-}
-
-#MorphingGLSL #webgl-output
-{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    margin: 0 auto;
-
-    transform: translate(-50%, -50%);
-}
-
-#maskEffect .sketchTitle
-{
-    color: #000;
-}
-
-#maskEffect .sketchDes
-{
-    color: #000;
-}
-
-#maskEffect #webgl-output
-{
-    position: fixed;
-
-    width: 100%;
-    height: 100%;
 }
