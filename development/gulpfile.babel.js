@@ -26,9 +26,9 @@ gulp.task('default', [
                     ]);
 
 //--------------------------------------------------
-//  publish
+//  build
 //--------------------------------------------------
-gulp.task('publish', (callback)=>{
+gulp.task('build', (callback)=>{
 
   return runSequence(
     'clean',
