@@ -1,5 +1,6 @@
 const path = require('path');
 const PATH = require('./config');
+const webpack = require('webpack');
 
 module.exports = {
 	mode: 'none',
@@ -69,6 +70,12 @@ module.exports = {
 			}
 		]
 	},
+	// プラグインの設定
+	plugins: [
+		new webpack.ProvidePlugin({
+			$: 'jquery'
+		})
+	],
 	resolve: {
 		modules: [
 			path.join(__dirname, 'node_modules')

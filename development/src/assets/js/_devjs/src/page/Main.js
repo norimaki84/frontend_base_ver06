@@ -20,18 +20,16 @@ export default class Main {
   }
 
   setup() {
-
+    
   }
 
   onReady() {
-
     //pageページ別のIDを取得
     const page = $('body').data('id');
-
-    window.console.log('現在のページIDは ', page);
+    console.log('現在のページIDは ', page);
 
 		//pageのIDごとに発火するクラスの振り分け
-    switch (page) {
+    switch(page) {
 
       case 'top':
         new DisplayTop();
@@ -54,8 +52,13 @@ export default class Main {
 
   setEvents() {
 
-    $(document).on('ready', this.onReady.bind(this));
-    $(window).on('load', this.onLoad.bind(this));
+    document.addEventListener('DOMContentLoaded', () => {
+      this.onRender();
+    });
+
+    window.addEventListener('load', () => {
+      this.onReady();
+    }, false);
 
   }
 
