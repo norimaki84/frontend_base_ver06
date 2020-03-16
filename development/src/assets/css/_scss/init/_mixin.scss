@@ -1,3 +1,6 @@
+@charset "utf-8";
+
+// font設定
 @mixin sansJpRegular {
   font-family: 'NotoSansCJKjp-Regular', sans-serif;
 }
@@ -14,6 +17,7 @@
   font-family: 'NotoSansCJKjp-Black', sans-serif;
 }
 
-@mixin poppins {
-  font-family: 'Poppins', sans-serif;
+// letter-spacing設定
+@mixin tracking($value) {
+  letter-spacing: ($value / 1000) + em;
 }
