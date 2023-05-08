@@ -38,7 +38,7 @@
     "gulp-uglify-es": "^2.0.0",
     "gulp-webpack": "^1.5.0",
     "imagemin-pngquant": "^4.2.2",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "raw-loader": "^0.5.1",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.5",
